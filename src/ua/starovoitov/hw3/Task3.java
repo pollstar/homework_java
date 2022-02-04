@@ -4,7 +4,7 @@ package ua.starovoitov.hw3;
  * Вводится строка, состоящая из слов, разделенных пробелами.
  * Требуется посчитать количество слов в ней.
  */
-
+// for commit
 import java.util.Scanner;
 
 public class Task3 {
