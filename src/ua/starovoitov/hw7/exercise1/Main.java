@@ -21,14 +21,14 @@ public class Main {
     public static void main(String[] args) {
         Car car1 = new Car();
         car1.setManufacturer("BMW");
-        car1.setEngine("2,5");
+        car1.setEngine("diesel");
         car1.setColour("red");
         car1.setPetrol(40);
         System.out.println(car1);
 
         Car car2 = new Car();
         car2.setManufacturer("Audi");
-        car2.setEngine("2,0");
+        car2.setEngine("electrical");
         car2.setColour("green");
         car2.setPetrol(80);
         System.out.println(car2);
@@ -39,7 +39,7 @@ public class Main {
         car2.startEngine("Two");
         System.out.println("level petrol > 50? is = "+ car2.isEnoughPetrolLevel());
 
-        Car car3 = new Car("Suzuki", "1,8", "black");
+        Car car3 = new Car("Suzuki", "petrol", "black");
         System.out.println(car3);
         car3.startEngine("Three");
         System.out.println("level petrol > 50? is = "+ car3.isEnoughPetrolLevel());
