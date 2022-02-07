@@ -69,26 +69,8 @@ public class Car {
         System.out.println("{" + name + "} запустил двмгатель");
     }
 
-    /**
-     * проверяет количество бензина
-     *
-     * @return если значение ниже 50 - возвращает - false, если больше - true
-     */
     public boolean isEnoughPetrolLevel() {
         return this.petrol >= 50;
     }
 }
 
-enum Manufacturer {
-    BMW("БМВ"), AUDI("Ауди"), SUZUKI("Судзуки");
-
-    final private String russianName;
-
-    Manufacturer(String manufactured) {
-        this.russianName = manufactured;
-    }
-
-    public String getRussianName() {
-        return russianName;
-    }
-}

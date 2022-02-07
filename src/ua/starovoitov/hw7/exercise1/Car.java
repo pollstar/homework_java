@@ -7,17 +7,8 @@ public class Car {
     private String colour;
     private int petrol;
 
-    Car() {
+    Car() {}
 
-    }
-
-    /**
-     * Init parametrs of the car
-     *
-     * @param manufacturer Производитель
-     * @param engine       тип двигателя
-     * @param colour       цвет
-     */
     Car(String manufacturer, String engine, String colour) {
         setManufacturer(manufacturer);
         setEngine(engine);
