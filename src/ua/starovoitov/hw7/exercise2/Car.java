@@ -15,9 +15,9 @@ public class Car {
     /**
      * Init parametrs of the car
      *
-     * @param manufacturer производитель
-     * @param engine       класс двигателя
-     * @param colour       цвет авто
+     * @param manufacturer vendor
+     * @param engine       type engine
+     * @param colour       color automobile
      */
     Car(Manufacturer manufacturer, Engine engine, String colour) {
         setManufacturer(manufacturer);
