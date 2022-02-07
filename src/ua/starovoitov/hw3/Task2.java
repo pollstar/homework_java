@@ -5,7 +5,7 @@ package ua.starovoitov.hw3;
  * После этого определить, является ли она палиндромом (перевертышем),
  * т.е. одинаково пишется как с начала, так и с конца.
  */
-
+// for commit
 import java.util.*;
 
 public class Task2 {

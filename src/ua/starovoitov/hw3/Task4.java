@@ -19,7 +19,7 @@ package ua.starovoitov.hw3;
  * Иначе будет проверяться условие guess < secret.
  * При его положительном значении появится сообщение "Мало", иначе сообщение "Угадал".
  */
-
+// for commit
 import java.util.Scanner;
 
 public class Task4 {
