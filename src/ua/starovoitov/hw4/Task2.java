@@ -1,4 +1,5 @@
 package ua.starovoitov.hw4;
+
 /**
  * Заполнить одномерный массив случайными целочисленными значениями.
  * Проверить сколько простых чисел присутствует в массиве. Размер массива 1000 элементов.
@@ -6,8 +7,7 @@ package ua.starovoitov.hw4;
 
 import java.util.Arrays;
 
-public class
-Task2 {
+public class Task2 {
     public static void main(String[] args) {
         int[] array = createRandomArrayIntOfRange(1000, 0, 1000);
 
@@ -41,7 +41,10 @@ Task2 {
      * @return true if a number is prime
      */
     private static boolean numberIsPrime(int number) {
-        for (int i = 2; i < number / 2; i++) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i < (number / 2) + 1; i++) {
             if (number % i == 0) {
                 return false;
             }

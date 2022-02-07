@@ -25,7 +25,7 @@ public class Task3 {
     private static int countingCompositeNumbers(int[] numbers) {
         int result = 0;
         for (int n : numbers) {
-            if (!numberIsPrime(n)) {
+            if (!numberIsPrime(n) && n > 1) {
                 result++;
                 System.out.print(n + " ");
             }
@@ -40,14 +40,16 @@ public class Task3 {
      * @return true if a number is prime
      */
     private static boolean numberIsPrime(int number) {
-        for (int i = 2; i < number / 2; i++) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i < (number / 2) + 1; i++) {
             if (number % i == 0) {
                 return false;
             }
         }
         return true;
     }
-
     /**
      *  Creating an array with random numbers from min up to max.
      * @param length  length array

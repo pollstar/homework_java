@@ -13,9 +13,6 @@ public class Task1 {
 
         int[] array = createRandomArrayIntOfRange(400, 1, 10);
 
-
-//        int array[] = {2,0};
-
         System.out.println(Arrays.toString(array));
         System.out.println("Arithmetic Mean = " + calculatingArithmeticMean(array));
         System.out.println("Geometric Mean = " + calculatingGeometricMean(array));
