@@ -31,16 +31,12 @@ public class Task2 {
     /**
      * checking array for descending
      *
-     * @param array
+     * @param array array for checking
      * @return true if array sorted revers
      */
     private static boolean isSortedAscending(int[] array) {
-        if (array.length == 0) {
-            throw new RuntimeException("array is empty");
-        }
-
-        if (array.length == 1) {
-            throw new RuntimeException("array length must be greater than 1");
+        if (array.length <= 1) {
+            return true;
         }
 
         int prevElement = array[0];
