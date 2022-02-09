@@ -1,4 +1,4 @@
-package ua.starovoitov.module1.task1;
+package ua.starovoitov.hw8.task1;
 
 import java.util.Scanner;
 

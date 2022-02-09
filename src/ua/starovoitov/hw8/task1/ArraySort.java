@@ -1,10 +1,11 @@
-package ua.starovoitov.module1.task1;
+package ua.starovoitov.hw8.task1;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 public class ArraySort {
-    int[] array;
+    final private int[] array;
 
     ArraySort(int length) {
         if(length < 0) {
