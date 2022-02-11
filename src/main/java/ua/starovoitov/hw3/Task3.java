@@ -1,5 +1,5 @@
 package ua.starovoitov.hw3;
-/**
+/*
  * Количество слов в строке
  * Вводится строка, состоящая из слов, разделенных пробелами.
  * Требуется посчитать количество слов в ней.
@@ -22,7 +22,7 @@ public class Task3 {
 
     /**
      *  returns the number of words in a sentence
-     * @param string
+     * @param string convert string
      * @return number of words
      */
     private static int countWords(String string) {
