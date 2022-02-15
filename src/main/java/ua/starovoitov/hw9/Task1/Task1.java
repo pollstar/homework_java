@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class Task1 {
     public static void main(String[] args) {
 
-        int[] array = createRandomArrayIntOfRange(400, 1, 10);
+        int[] array = RandomArray.getIntOfRange(400, 1, 10);
 
         System.out.println(Arrays.toString(array));
         System.out.println("Arithmetic Mean = " + calculatingArithmeticMean(array));
@@ -48,20 +48,4 @@ public class Task1 {
         }
         return result;
     }
-
-    /**
-     *  Creating an array with random numbers from min up to max.
-     * @param length  length array
-     * @param min   minimal value of number in array
-     * @param max maximal value of number in array
-     * @return new array
-     */
-    public static int[] createRandomArrayIntOfRange(int length, int min, int max) {
-        int[] array = new int[length];
-        for (int i = 0; i < length; i++) {
-            array[i] = (int) (Math.random() * (max - min + 1) + min);
-        }
-        return array;
-    }
-
 }

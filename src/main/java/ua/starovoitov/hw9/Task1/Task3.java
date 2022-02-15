@@ -8,13 +8,15 @@ import java.util.Arrays;
 
 public class Task3 {
     public static void main(String[] args) {
-        int[] array = createRandomArrayIntOfRange(1000, 0, 1000);
+//        final int[] array = RandomArray.getIntOfRange(1000, 0, 1000);
+        final int[] array = {5, 6, 7, 8, 9, 0, -1, -2, -3, 4, 10};
 
         System.out.println("Source array:");
         System.out.println(Arrays.toString(array));
+        System.out.println("Array with composite numbers:");
+        System.out.println(Arrays.toString(getArrayWithCompositeNumbers(array)));
         System.out.println("Composite numbers in an array");
         System.out.println(countingCompositeNumbers(array));
-
     }
 
     /**
@@ -22,46 +24,25 @@ public class Task3 {
      * @param numbers array with numbers
      * @return number of composites
      */
-    private static int countingCompositeNumbers(int[] numbers) {
+    public static int countingCompositeNumbers(int[] numbers) {
         int result = 0;
         for (int n : numbers) {
-            if (!numberIsPrime(n) && n > 1) {
+            if (NumberPrime.isComposite(n)) {
                 result++;
-                System.out.print(n + " ");
             }
         }
-        System.out.println("\nNumber of composite numbers in the array");
         return result;
     }
 
-    /**
-     * Checking a number for a prime
-     * @param number number for check
-     * @return true if a number is prime
-     */
-    private static boolean numberIsPrime(int number) {
-        if (number <= 1) {
-            return false;
-        }
-        for (int i = 2; i < (number / 2) + 1; i++) {
-            if (number % i == 0) {
-                return false;
+    public static int[] getArrayWithCompositeNumbers(int[] array) {
+        int[] arrayResult = new int[countingCompositeNumbers(array)];
+        int index = 0;
+        for (int n : array) {
+            if (NumberPrime.isComposite(n)) {
+                arrayResult[index] = n;
+                index++;
             }
         }
-        return true;
-    }
-    /**
-     *  Creating an array with random numbers from min up to max.
-     * @param length  length array
-     * @param min   minimal value of number in array
-     * @param max maximal value of number in array
-     * @return new array
-     */
-    private static int[] createRandomArrayIntOfRange(int length, int min, int max) {
-        int[] array = new int[length];
-        for (int i = 0; i < length; i++) {
-            array[i] = (int) (Math.random() * (max - min + 1) + min);
-        }
-        return array;
+        return arrayResult;
     }
 }
