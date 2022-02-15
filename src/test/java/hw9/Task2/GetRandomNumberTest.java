@@ -1,13 +1,12 @@
 package hw9.Task2;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import ua.starovoitov.hw9.Task2.GetRandomNumber;
 
 final public class GetRandomNumberTest {
-    final private RandomTest random = Mockito.mock(RandomTest.class);
+    final private RandomWrapper random = Mockito.mock(RandomWrapper.class);
     final private GetRandomNumber randomNumber = new GetRandomNumber();
     private int testNumber;
 
