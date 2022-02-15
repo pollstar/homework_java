@@ -8,8 +8,7 @@ import java.util.Arrays;
 
 public class Task3 {
     public static void main(String[] args) {
-//        final int[] array = RandomArray.getIntOfRange(1000, 0, 1000);
-        final int[] array = {5, 6, 7, 8, 9, 0, -1, -2, -3, 4, 10};
+        final int[] array = RandomArray.getIntOfRange(1000, 0, 1000);
 
         System.out.println("Source array:");
         System.out.println(Arrays.toString(array));

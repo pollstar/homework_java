@@ -3,6 +3,9 @@ package hw9.Task1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 import static ua.starovoitov.hw9.Task1.Task3.*;
 
 public class Task3Test {
@@ -33,13 +36,8 @@ public class Task3Test {
     void getArrayWithCompositeNumbers_Ok() {
         System.out.print("Testing getArrayWithCompositeNumbers_Ok: ");
         final int[] array = {5, 6, 7, 8, 9, 0, -1, 2, -3, -4, 10};
-        final int[] arrayResult = getArrayWithCompositeNumbers(array);
-
-        Assertions.assertAll("arrayResult",
-                () -> Assertions.assertEquals(arrayResult[0], 6),
-                () -> Assertions.assertEquals(arrayResult[1], 8),
-                () -> Assertions.assertEquals(arrayResult[2], 9),
-                () -> Assertions.assertEquals(arrayResult[3], 10));
+        final int[] arrayResult = {6, 8, 9, 10};
+        Assertions.assertTrue(Arrays.equals(arrayResult, getArrayWithCompositeNumbers(array)));
         System.out.println("Ok");
     }
 
