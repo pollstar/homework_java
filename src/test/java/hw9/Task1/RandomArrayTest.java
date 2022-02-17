@@ -14,7 +14,7 @@ public class RandomArrayTest {
         final int minimal = -10;
         final int maximal = 10;
 
-        System.out.print("Testing createRandomArrayIntOfRange_CheckIntoRange: ");
+        System.out.println("Testing createRandomArrayIntOfRange_CheckIntoRange: ");
         int[] arrayTest;
         arrayTest = RandomArray.getIntOfRange(50, minimal, maximal);
         int minNumber = arrayTest[0];
@@ -27,24 +27,21 @@ public class RandomArrayTest {
                 (minNumber >= minimal), "Minimum number: " + minNumber + " less than range: " + minimal);
         Assertions.assertTrue(
                 (maxNumber <= maximal), "Maximal number: " + maxNumber + " over range:" + maximal);
-
-        System.out.println("Ok");
     }
 
 
     @Test
     void createRandomArrayIntOfRange_LengthArray() {
-        System.out.print("Testing createRandomArrayIntOfRange_LengthArray: ");
+        System.out.println("Testing createRandomArrayIntOfRange_LengthArray: ");
         final int length = 5;
         final int testLength = RandomArray.getIntOfRange(length, -10, 10).length;
         Assertions.assertEquals(length, testLength);
-        System.out.println("Ok");
     }
 
 
     @Test
     void createRandomArrayIntOfRange_CheckRange() {
-        System.out.print("Testing createRandomArrayIntOfRange_CheckRange: ");
+        System.out.println("Testing createRandomArrayIntOfRange_CheckRange: ");
         final int minimal = 10;
         final int maximal = 10;
 
@@ -53,6 +50,5 @@ public class RandomArrayTest {
         for (int number : arrayTest) {
             Assertions.assertEquals(10, number);
         }
-        System.out.println("Ok");
     }
 }

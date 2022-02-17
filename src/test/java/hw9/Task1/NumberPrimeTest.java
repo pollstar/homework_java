@@ -7,39 +7,35 @@ import ua.starovoitov.hw9.Task1.NumberPrime;
 public class NumberPrimeTest {
     @Test
     void numberIsPrime_Ok() {
-        System.out.print("Testing numberIsPrime_Ok: ");
+        System.out.println("Testing numberIsPrime_Ok: ");
         Assertions.assertTrue(NumberPrime.isPrime(2));
         Assertions.assertTrue(NumberPrime.isPrime(3));
         Assertions.assertTrue(NumberPrime.isPrime(11));
-        System.out.println("Ok");
     }
 
     @Test
     void numberIsPrime_ForNumbersNotPrime() {
-        System.out.print("Testing numberIsPrime_ForNumbersNotPrime: ");
+        System.out.println("Testing numberIsPrime_ForNumbersNotPrime: ");
         Assertions.assertFalse(NumberPrime.isPrime(0));
         Assertions.assertFalse(NumberPrime.isPrime(1));
         Assertions.assertFalse(NumberPrime.isPrime(4));
         Assertions.assertFalse(NumberPrime.isPrime(-3));
-        System.out.println("Ok");
     }
 
     @Test
     void numberIsComposite_Ok() {
-        System.out.print("Testing numberIsComposite_Ok: ");
+        System.out.println("Testing numberIsComposite_Ok: ");
         Assertions.assertTrue(NumberPrime.isComposite(4));
         Assertions.assertTrue(NumberPrime.isComposite(10));
         Assertions.assertTrue(NumberPrime.isComposite(9));
-        System.out.println("Ok");
     }
 
     @Test
     void numberIsPrime_ForNumbersNotComposite() {
-        System.out.print("Testing numberIsPrime_ForNumbersNotComposite: ");
+        System.out.println("Testing numberIsPrime_ForNumbersNotComposite: ");
         Assertions.assertFalse(NumberPrime.isComposite(0));
         Assertions.assertFalse(NumberPrime.isComposite(1));
         Assertions.assertFalse(NumberPrime.isComposite(11));
         Assertions.assertFalse(NumberPrime.isComposite(-3));
-        System.out.println("Ok");
     }
 }
