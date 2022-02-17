@@ -46,8 +46,8 @@ public class Task3 {
     }
 
     private static void printTwoDimensionArray(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(Arrays.toString(array[i]));
+        for (int[] ints : array) {
+            System.out.println(Arrays.toString(ints));
         }
     }
 }
