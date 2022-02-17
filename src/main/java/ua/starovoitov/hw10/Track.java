@@ -11,18 +11,18 @@ public class Track extends Car {
     public void loadingCargo() {
         if (!cargo) {
             cargo = true;
-            System.out.println("Truck loaded with cargo");
+            System.out.println(" - loaded");
         } else {
-            System.out.println("The truck is already loaded");
+            System.out.println(" - already loaded");
         }
     }
 
     public void unloadingCargo() {
         if (cargo) {
             cargo = false;
-            System.out.println("Truck unloaded with cargo");
+            System.out.println(" - unloaded");
         } else {
-            System.out.println("The truck is already unloaded");
+            System.out.println(" - already unloaded");
         }
     }
 

@@ -40,12 +40,19 @@ public class Task1 {
 
         System.out.println();
         car3.printStatus();
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 4; i++) {
             car3.move();
         }
+        car3.printStatus();
+        for (int i = 0; i < 7; i++) {
+            car3.move();
+        }
+        System.out.print("Truck is loading cargo");
         car3.loadingCargo();
+        System.out.print("Truck is loading cargo");
         car3.loadingCargo();
         car3.printStatus();
+        System.out.print("Truck is unloading cargo");
         car3.unloadingCargo();
         car3.refuel();
         car3.printStatus();
