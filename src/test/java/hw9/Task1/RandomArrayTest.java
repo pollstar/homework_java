@@ -34,7 +34,7 @@ public class RandomArrayTest {
     void createRandomArrayIntOfRange_LengthArray() {
         System.out.println("Testing createRandomArrayIntOfRange_LengthArray: ");
         final int length = 5;
-        final int testLength = RandomArray.getIntOfRange(length, -10, 10).length;
+        final int testLength = RandomArray.getIntOfRange(length, 0, 10).length;
         Assertions.assertEquals(length, testLength);
     }
 
@@ -49,6 +49,19 @@ public class RandomArrayTest {
         arrayTest = RandomArray.getIntOfRange(10, minimal, maximal);
         for (int number : arrayTest) {
             Assertions.assertEquals(10, number);
+        }
+    }
+
+    @Test
+    void createRandomArrayIntOfRange_MimMaxInvert() {
+        System.out.println("Testing createRandomArrayIntOfRange_MimMaxInvert: ");
+        final int minimal = 10;
+        final int maximal = -10;
+
+        int[] arrayTest;
+        arrayTest = RandomArray.getIntOfRange(10, minimal, maximal);
+        for (int number : arrayTest) {
+            Assertions.assertTrue((number <= minimal && number >= maximal));
         }
     }
 }
