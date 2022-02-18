@@ -16,18 +16,11 @@ public class Main {
 
     public static void issueSalary (Employer[] employers) {
         for (Employer employer: employers) {
-            if ( employer.getClass().getSimpleName().equals("Worker")) {
-                Worker worker = (Worker) employer;
-                System.out.println(worker.getWorker());
-            } else if ( employer.getClass().getSimpleName().equals("Watchman")) {
-                Watchman watchman = (Watchman) employer;
-                System.out.println(watchman.getWatchman());
-            } else if ( employer.getClass().getSimpleName().equals("Boss")) {
-                Boss boss = (Boss) employer;
-                System.out.println(boss.getBossType());
-            } else {
-                Accountant accountant = (Accountant) employer;
-                System.out.println(accountant.getAccountantType());
+            switch (employer.getClass().getSimpleName()) {
+                case "Worker" -> System.out.println(((Worker) employer).getWorker());
+                case "Watchman" -> System.out.println(((Watchman) employer).getWatchman());
+                case "Boss" -> System.out.println(((Boss) employer).getBossType());
+                default -> System.out.println(((Accountant) employer).getAccountantType());
             }
 
             System.out.printf("%s %d\n", employer.getName(), employer.accrual());
