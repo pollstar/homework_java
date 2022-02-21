@@ -7,7 +7,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 
-public abstract class Phone implements TelephoneRepair {
+public abstract class Phone implements PhoneRepair {
     protected StatusRepair progress;
     protected String vendor;
     protected String model;

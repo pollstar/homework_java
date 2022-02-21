@@ -86,7 +86,7 @@ public class Service {
         int countInProgress = 0;
         int countInPending = 0;
 
-        for (TelephoneRepair phone : phoneInService) {
+        for (PhoneRepair phone : phoneInService) {
             countInService++;
             switch (phone.getStatus()) {
                 case READY -> countIsReady++;
