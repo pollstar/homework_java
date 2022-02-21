@@ -1,7 +1,5 @@
 package ua.starovoitov.hw11.models.phones;
 
-import ua.starovoitov.hw11.models.Breakdowns;
-
 import java.util.Scanner;
 
 public class SmartPhone extends Phone {
@@ -12,31 +10,16 @@ public class SmartPhone extends Phone {
         super();
         Scanner sc = new Scanner(System.in);
         System.out.print("SerialIMEI number? ");
-        this.serialIMEI = sc.nextLong();
+        this.serialIMEI = getLongFromInput();
+    }
+
+    public SmartPhone(String vendor, String model, long serialIMEI) {
+        super(vendor, model);
+        this.serialIMEI = serialIMEI;
     }
 
     @Override
     public String getInfo() {
         return "Type: " + this.typePhone + ", " + super.getInfo() + ", IMEI number: " + this.serialIMEI;
-    }
-
-    @Override
-    public void repair() {
-
-    }
-
-    @Override
-    public void takeInRepair() {
-
-    }
-
-    @Override
-    public void takeOutRepair() {
-
-    }
-
-    @Override
-    public void testing() {
-
     }
 }

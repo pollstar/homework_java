@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class CreatePhoneForRepair {
     public Phone getPhone() {
         Scanner sc = new Scanner(System.in);
+
         int i = 0;
         do {
             System.out.println("Select phone type:");
@@ -17,6 +18,11 @@ public class CreatePhoneForRepair {
             System.out.println("2 - mobile phone");
             System.out.println("3 - smart phone");
             System.out.println("0 - exit");
+
+            while (!sc.hasNextInt()) {
+                System.out.println("must be number");
+                sc.next();
+            }
             i = sc.nextInt();
         } while (i < 0 || i > 3);
         switch (i) {

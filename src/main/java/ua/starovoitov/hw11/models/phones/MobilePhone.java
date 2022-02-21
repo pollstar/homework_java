@@ -10,7 +10,12 @@ public class MobilePhone extends Phone {
         super();
         Scanner sc = new Scanner(System.in);
         System.out.print("IMEI number? ");
-        this.imei = sc.nextLong();
+        this.imei = getLongFromInput();
+    }
+
+    public MobilePhone(String vendor, String model, long imei) {
+        super(vendor, model);
+        this.imei = imei;
     }
 
     @Override
@@ -18,23 +23,4 @@ public class MobilePhone extends Phone {
         return "Type: " + this.typePhone + ", " + super.getInfo() + ", IMEI: " + this.imei;
     }
 
-    @Override
-    public void repair() {
-
-    }
-
-    @Override
-    public void takeInRepair() {
-
-    }
-
-    @Override
-    public void takeOutRepair() {
-
-    }
-
-    @Override
-    public void testing() {
-
-    }
 }

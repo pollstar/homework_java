@@ -1,11 +1,13 @@
 package ua.starovoitov.hw11.models.phones;
 
+import ua.starovoitov.hw11.models.service.StatusRepair;
+
 public interface TelephoneRepair {
-    void repair();
+    StatusRepair getStatus();
 
     void takeInRepair();
 
-    void takeOutRepair();
+    void takeInService();
 
-    void testing();
+    void setIsReady();
 }
