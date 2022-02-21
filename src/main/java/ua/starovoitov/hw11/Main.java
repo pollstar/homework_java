@@ -20,7 +20,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int selectMenu = 0;
+        int selectMenu;
 
         do {
             System.out.println("----------------------------");
@@ -28,10 +28,10 @@ public class Main {
             System.out.println("1 - take phone in repair");
             System.out.println("2 - print list of phones in service");
             System.out.println("3 - print list of phones is ready");
-            System.out.println("4 - print a list of phones awaiting repair");
+            System.out.println("4 - print a list of phones pending of repair");
             System.out.println("5 - print a list of phones in the process of being repaired");
             System.out.println("6 - print statistic");
-            System.out.println("");
+            System.out.println();
             System.out.println("7 - testing the phone");
             System.out.println("8 - repair the phone");
             System.out.println("9 - give the phone to the client");
@@ -44,33 +44,15 @@ public class Main {
 
             selectMenu = sc.nextInt();
             switch (selectMenu) {
-                case 1 :
-                    service.takePhoneForRepair();
-                    break;
-                case 2:
-                    service.printListPhonesInService();
-                    break;
-                case 3:
-                    service.printListPhonesReady();
-                    break;
-                case 4:
-                    service.printListPhonesPending();
-                    break;
-                case 5:
-                    service.printListPhonesRepairInProgress();
-                    break;
-                case 6:
-                    service.printStatistic();
-                    break;
-                case 7:
-                    service.moveFromPendingToProgress();
-                    break;
-                case 8:
-                    service.moveFromProgressToReady();
-                    break;
-                case 9:
-                    service.givePhoneToClient();
-                    break;
+                case 1 -> service.takePhoneForRepair();
+                case 2 -> service.printListPhonesInService();
+                case 3 -> service.printListPhonesReady();
+                case 4 -> service.printListPhonesPending();
+                case 5 -> service.printListPhonesRepairInProgress();
+                case 6 -> service.printStatistic();
+                case 7 -> service.moveFromPendingToProgress();
+                case 8 -> service.moveFromProgressToReady();
+                case 9 -> service.givePhoneToClient();
             }
         } while ( selectMenu > 0 );
 

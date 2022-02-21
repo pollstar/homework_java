@@ -10,4 +10,5 @@ public interface TelephoneRepair {
     void takeInService();
 
     void setIsReady();
+
 }

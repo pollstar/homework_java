@@ -11,7 +11,7 @@ public class CreatePhoneForRepair {
     public Phone getPhone() {
         Scanner sc = new Scanner(System.in);
 
-        int i = 0;
+        int i;
         do {
             System.out.println("Select phone type:");
             System.out.println("1 - radio phone");
@@ -25,15 +25,12 @@ public class CreatePhoneForRepair {
             }
             i = sc.nextInt();
         } while (i < 0 || i > 3);
-        switch (i) {
-            case 1:
-                return new RadioPhone();
-            case 2:
-                return new MobilePhone();
-            case 3:
-                return new SmartPhone();
-            default:
-                return null; // знаю что не правильно, но упрощаю логику
-        }
+
+        return switch (i) {
+            case 1 -> new RadioPhone();
+            case 2 -> new MobilePhone();
+            case 3 -> new SmartPhone();
+            default -> null;
+        };
     }
 }
